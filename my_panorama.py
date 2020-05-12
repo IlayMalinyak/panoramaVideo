@@ -13,7 +13,7 @@ def main():
         exp_no_ext = experiment.split('.')[0]
         os.system('mkdir dump')
         os.system('mkdir dump/%s' % exp_no_ext)
-        os.system('ffmpeg -i videos/%s dump/%s/%s%%03d.jpg' % (experiment,
+        os.system('ffmpeg -i %s dump/%s/%s%%03d.jpg' % (experiment,
                                                                exp_no_ext, exp_no_ext))
 
         s = time.time()
